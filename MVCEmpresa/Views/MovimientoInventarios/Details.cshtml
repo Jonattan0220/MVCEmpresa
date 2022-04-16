@@ -1,0 +1,42 @@
+﻿@model MVCEmpresa.Models.MovimientoInventario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MovimientoInventario</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CodMovimientoInventario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CodMovimientoInventario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdCatalogoInventarioNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdCatalogoInventarioNavigation.IdCatalogoInventario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdOrdenNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdOrdenNavigation.IdOrden)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdTipoMovInventarioNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTipoMovInventarioNavigation.IdTipoMovInventario)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdMovimientoInventario">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
